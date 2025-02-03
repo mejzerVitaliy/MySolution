@@ -19,10 +19,11 @@ int main()
 	std::cout << "Привет, мир!\n";*/
 
 	std::cout << R"(h
-	e
-	l
-	l
-	o)";
+e
+l
+l
+o
+)";
 
 	int number1, number2, sum;
 
