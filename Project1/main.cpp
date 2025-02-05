@@ -1,107 +1,186 @@
-#include <iostream> 
+#include <iostream>
+// 
+//int main() 
+//{ 
+// const int SIZE = 3; 
+// 
+// int arr[SIZE]; 
+// 
+// for (int index = 0; index < SIZE; index++) 
+//  arr[index] = index * index; 
+// 
+// for (int index = 0; index < SIZE; index++) 
+//  std::cout << "arr[" << index << "] = " << arr[index] << std::endl; 
+// 
+// return 0; 
+//} 
+
+
+
+
+
+// Багатовимірні масиви (41) 
+
+// Синтаксис створення 2-вимірного масиву: 
+// Тип_Даних Ім'я_Масиву[Кількість_Підмасивів][Кількість_Елементів] 
+
+// Синтаксис до звернення елемента 2-вимірного масиву: 
+// Ім'я_Масиву[Індекс_Підмасиву][Індекс_Елементу_Підмасиву] 
+
+/*#include <iostream>
+
+ int main()
+ {
+ const int WEEKS = 2, DAYS = 5;
+
+ int temperatures[WEEKS][DAYS];
+
+ for (int i = 0; i < WEEKS; i++) {
+  for (int j = 0; j < DAYS; j++) {
+   temperatures[i][j] = j + i * j + i;
+  }
+ }
+
+ for (int i = 0; i < WEEKS; i++) {
+  for (int j = 0; j < DAYS; j++) {
+   std::cout << "temperatures[" << i << "][" << j << "] = " << temperatures[i][j] << std::endl;
+  }
+  std::cout << std::endl;
+ }
+
+ return 0;
+}*/
+
+
+
+//Рядки (42) 
+
+//#include <iostream> 
+// 
+//int main() 
+//{ 
+// std::cout << "Enter two word: "; 
+// 
+// char word[30]; 
+// char word2[30]; 
+//  
+// std::cin >> word; 
+// std::cin >> word2; 
+// 
+// std::cout << "Your word: " << word << std::endl; 
+// std::cout << "Your word2: " << word2 << std::endl; 
+// 
+// return 0; 
+//} 
+
+
+
+
+// Функція(43)- це іменований набір коду, який може приймати якусь інформацію та повертати результат. 
+
+
+/*
+Синтаксис визначення функції:
+Тип Повертаючого значенняя  Ім'я функції (список параметрів)
+{
+Код
+}
+*/
+
+/*
+Синтаксис виклику функції:
+Ім'я функції (список параметрів);
+*/
+
+/*
+При створенні функції | При виклик функції
+Формальні параметри   | Фактичні параметри
+Формальні аргументи   | Фактичні аргументи
+Парамкетри            | Аргументи
+*/
+
+//int Multiple(int a, int b) 
+//{ 
+// return a * b; 
+//} 
+// 
+//double ToCube(double number) 
+//{ 
+// double cube = number * number * number; 
+// return cube; 
+//} 
+// 
+//int main() 
+//{ 
+// double number = 2.5; 
+// double cube = ToCube(number); 
+// 
+// std::cout << "Number = " << number << std::endl; 
+// std::cout << "Cube = " << cube << std::endl; 
+// 
+// return 0; 
+//} 
+
+
+//void Show(int arr[], int size) 
+//{ 
+// for (int i = 0; i < size; i++) 
+// { 
+//  std::cout << arr[1] << " "; 
+// } 
+// std::cout << std::endl; 
+//} 
+// 
+// 
+//void Initialize(int arr[], int size) 
+//{ 
+// for (int i = 0; i < size; i++) 
+// { 
+//  arr[i] = i + i; 
+// } 
+//} 
+// 
+//int main() 
+//{ 
+// const int SIZE1 = 3; 
+// const int SIZE2 = 5; 
+// 
+// int arr1[SIZE1]; 
+// int arr2[SIZE2]; 
+// 
+// Initialize(arr1, SIZE1); 
+// Initialize(arr2, SIZE2); 
+// 
+// Show(arr1, SIZE1); 
+// Show(arr2, SIZE2); 
+// 
+// return 0; 
+//} 
+
+
+// відмінність відправки масивів і змінних 
+
+void A(int arr[], int size)
+{
+	arr[0] = 25;
+}
+
+
+void B(int a)
+{
+	a = 13;
+}
 
 int main()
 {
-	// Синтаксис оператора if: (28) 
+	int arr[3] = { 1, 2, 3 };
+	int a = 120;
 
-	 /*if (умова№1 )
-	  дія№1
-	 else
-	  дія№2
-	   */
+	A(arr, 3);
+	B(a);
 
-	   //std::cout << "Enter a number"; 
-	   //int number; 
-	   //std::cin >> number; 
-
-	   //if (number == 1) 
-	   // std::cout << "One.\n"; 
-	   //else if (number == 2) 
-	   // std::cout << "Two.\n"; 
-	   //if (number == 3) 
-	   // std::cout << "Three.\n"; 
-
-
-
-
-	   //ТЕРНАРИЙ ОПЕРАТОР(29) 
-	   //?:  
-	   // Умова ? Вираз1 : Вираз2 
-
-	   //std::cout << "Enter two numbers: "; 
-	   //int number1, number2; 
-	   //std::cin >> number1 >> number2; 
-
-	   //int max = (number1 > number2 ? number1 : number2); 
-
-	   //std::cout << max << std::endl; 
-
-
-	   //SWITCH(30) 
-
-	   /*switch(ім'я_змінної)
-	   {
-		case Значення №1:
-		 Перелік_дій №1
-		 break;
-		case Значення №2:
-		 Перелік_дій №2
-		 break;
-		case Значення №3:
-		 Перелік_дій №3
-		 break;
-		case Значення №4:
-		 Перелік_дій №4
-		 break;
-		default:
-		 Перелік_Дій_За_Замовчуванням
-		 break;
-		}*/
-
-
-		//(31)ПОНЯТТЯ ЦИКЛУ 
-
-		// 1. while 
-		// 2. do while 
-		// 3. for (стандартна форма) 
-		// 4. for з діапазоном 
-
-
-
-		//(32) Синтаскис циклу while: коли дія зв'язана з умовою 
-
-		/*while (умова)
-		{
-		Перелік дій
-		}
-		*/
-
-
-		/*int sum = 0;
-		int number;
-
-		std::cout << "Enter a number (or 0 to stop) ";
-		std::cin >> number;
-		sum += number;
-
-		while (number != 0)
-		{
-		std::cout << "Enter a number (or 0 to stop) ";
-		std::cin >> number;
-		sum += number;
-		}
-
-		std::cout << "Sum = " << sum << std::endl;*/
-
-
-
-		//(33) Синтаскис циклу do while: коли дія зв'язана з умовою 
-
-	   /*do
-	   {
-	   Перелік дій
-		}while (умова);
-	   */
+	std::cout << arr[0] << std::endl;
+	std::cout << a << std::endl;
 
 	return 0;
 }
